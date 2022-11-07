@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        @media (min-width:555px) {}
+
+        :root {
+            /*  750px / 326px = 2.3in  */
+            --width-prefered: 750px;
+            --width-minimum: 384px;
+            /* 1334px / 326px = 4.09in */
+            --prefered-height: 4.09in;
+        }
+
+        body {
+            background-image: url("./green-baize.jpg");
+            background-attachment: fixed;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .flex-container {
+            display: Flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: space-between;
+            -border: 2px solid navy;
+            min-width: var(--width-minimum);
+            max-width: var(--prefered-width);
+        }
+
+        #flex>div {
+            flex: 1;
+            flex-basis: 21%;
+            border: 2px dashed royalblue;
+            margin: 2px;
+            font-size: 64px;
+            text-align: center;
+        }
+
+        .card-obverse:hover {
+            transform: rotateY(180deg);
+            box-shadow: -5px 5px 5px #aaa;
+            transform-style: preserve-3d;
+            transition: all 1.0s linear;
+        }
+
+        .card-reverse {position: relative;left: 0;top: 0;;
+            display: block;
+            transform: rotateY(180deg);
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="flex" class="flex-container">
+        <div>
+            <div class="card-obverse"><svg viewBox="0 0 170 245">
+                    <use href="./node_modules/svg-cards/svg-cards.svg#back" fill="navy"></use>
+                </svg></div>
+
+            <div class="card-reverse"><svg viewBox="0 0 170 245">
+                    <use href="./node_modules/svg-cards/svg-cards.svg#joker_red"></use>
+                </svg></div>
+        </div>
+        <div class="card"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#back" fill="red"></use>
+            </svg></div>
+        <div class="card"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#back"></use>
+            </svg></div>
+        <div class="card"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#back"></use>
+            </svg></div>
+
+        <div class="card"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#back" fill="navy"></use>
+            </svg></div>
+        <div class="card"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#back" fill="red"></use>
+            </svg></div>
+        <div class="card"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#joker_red"></use>
+            </svg></div>
+        <div class="card"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#joker_black"></use>
+            </svg></div>
+
+        <div data-suit="club" data-rank="1"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#club_1"></use>
+            </svg></div>
+        <div data-suit="diamond" data-rank="1"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#diamond_1"></use>
+            </svg></div>
+        <div data-suit="heart" data-rank="1"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#heart_1"></use>
+            </svg></div>
+        <div data-suit="spade" data-rank="1"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#spade_1"></use>
+            </svg></div>
+
+        <div data-suit="club" data-rank="2"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#club_2"></use>
+            </svg></div>
+        <div data-suit="diamond" data-rank="2"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#diamond_2"></use>
+            </svg></div>
+        <div data-suit="heart" data-rank="2"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#heart_2"></use>
+            </svg></div>
+        <div data-suit="spade" data-rank="2"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#spade_2"></use>
+            </svg></div>
+
+        <div data-suit="club" data-rank="3"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#club_3"></use>
+            </svg></div>
+        <div data-suit="diamond" data-rank="3"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#diamond_3"></use>
+            </svg></div>
+        <div data-suit="heart" data-rank="3"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#heart_3"></use>
+            </svg></div>
+        <div data-suit="spade" data-rank="3"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#spade_3"></use>
+            </svg></div>
+
+        <div data-suit="club" data-rank="4"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#club_4"></use>
+            </svg></div>
+        <div data-suit="diamond" data-rank="4"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#diamond_4"></use>
+            </svg></div>
+        <div data-suit="heart" data-rank="4"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#heart_4"></use>
+            </svg></div>
+        <div data-suit="spade" data-rank="4"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#spade_4"></use>
+            </svg></div>
+
+        <div data-suit="club" data-rank="5"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#club_5"></use>
+            </svg></div>
+        <div data-suit="diamond" data-rank="5"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#diamond_5"></use>
+            </svg></div>
+        <div data-suit="heart" data-rank="5"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#heart_5"></use>
+            </svg></div>
+        <div data-suit="spade" data-rank="5"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#spade_5"></use>
+            </svg></div>
+
+        <div data-suit="club" data-rank="6"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#club_6"></use>
+            </svg></div>
+        <div data-suit="diamond" data-rank="6"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#diamond_6"></use>
+            </svg></div>
+        <div data-suit="heart" data-rank="6"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#heart_6"></use>
+            </svg></div>
+        <div data-suit="spade" data-rank="6"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#spade_6"></use>
+            </svg></div>
+
+        <div data-suit="club" data-rank="7"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#club_7"></use>
+            </svg></div>
+        <div data-suit="diamond" data-rank="7"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#diamond_7"></use>
+            </svg></div>
+        <div data-suit="heart" data-rank="7"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#heart_7"></use>
+            </svg></div>
+        <div data-suit="spade" data-rank="7"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#spade_7"></use>
+            </svg></div>
+
+        <div data-suit="club" data-rank="8"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#club_8"></use>
+            </svg></div>
+        <div data-suit="diamond" data-rank="8"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#diamond_8"></use>
+            </svg></div>
+        <div data-suit="heart" data-rank="8"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#heart_8"></use>
+            </svg></div>
+        <div data-suit="spade" data-rank="8"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#spade_8"></use>
+            </svg></div>
+
+        <div data-suit="club" data-rank="9"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#club_9"></use>
+            </svg></div>
+        <div data-suit="diamond" data-rank="9"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#diamond_9"></use>
+            </svg></div>
+        <div data-suit="heart" data-rank="9"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#heart_9"></use>
+            </svg></div>
+        <div data-suit="spade" data-rank="9"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#spade_9"></use>
+            </svg></div>
+
+        <div data-suit="club" data-rank="10"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#club_10"></use>
+            </svg></div>
+        <div data-suit="diamond" data-rank="10"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#diamond_10"></use>
+            </svg></div>
+        <div data-suit="heart" data-rank="10"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#heart_10"></use>
+            </svg></div>
+        <div data-suit="spade" data-rank="10"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#spade_10"></use>
+            </svg></div>
+
+        <div data-suit="club" data-rank="11"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#club_jack"></use>
+            </svg></div>
+        <div data-suit="diamond" data-rank="11"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#diamond_jack"></use>
+            </svg></div>
+        <div data-suit="heart" data-rank="11"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#heart_jack"></use>
+            </svg></div>
+        <div data-suit="spade" data-rank="11"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#spade_jack"></use>
+            </svg></div>
+
+        <div data-suit="club" data-rank="12"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#club_queen"></use>
+            </svg></div>
+        <div data-suit="diamond" data-rank="12"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#diamond_queen"></use>
+            </svg></div>
+        <div data-suit="heart" data-rank="12"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#heart_queen"></use>
+            </svg></div>
+        <div data-suit="spade" data-rank="12"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#spade_queen"></use>
+            </svg></div>
+
+        <div data-suit="club" data-rank="13"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#club_king"></use>
+            </svg></div>
+        <div data-suit="diamond" data-rank="13"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#diamond_king"></use>
+            </svg></div>
+        <div data-suit="heart" data-rank="13"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#heart_king"></use>
+            </svg></div>
+        <div data-suit="spade" data-rank="13"><svg viewBox="0 0 170 245">
+                <use href="./node_modules/svg-cards/svg-cards.svg#spade_king"></use>
+            </svg></div>
+
+    </div>
+
+</body>
+
+</html>
