@@ -1,181 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Mobile Magic</title>
-    <link rel="icon" type="image/x-icon" href="/Assets/Images/favicon.ico" />
-    <style>
-        @media (min-width:555px) {}
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://party-trick.github.io/Assets/Images/favicon.ico?%PUBLIC_URL%" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="TypeScript/React mobile magic trick" />
 
-        :root {
-            /*  750px / 326px = 2.3in  */
-            --width-prefered: 750px;
-            --width-minimum: 384px;
-            /* 1334px / 326px = 4.09in */
-            --prefered-height: 4.09in;
-        }
+<script>
+// <![CDATA[
+"use strict";
 
-        body {
-            background-image: url("./green-baize.jpg");
-            background-attachment: fixed;
-            margin: 0px;
-            padding: 0px;
-        }
+window.addEventListener("DOMContentLoaded", (event) => { var root; return (root = document.querySelector("#root")) === null || root === void 0 ? void 0 : root.appendChild(SVG.create()); });
 
-        .links {
-            margin-top: 480px;
-            background-color: rgba(23, 144, 31, 0.75);
-            width: 98%;
-            height: 84px;
-        }
+class SVG {
+    static create() {
+        const svg = document.createElementNS(SVG.namespace, "svg");
+        svg.setAttribute("viewBox", "0 0 170 245");
+        const use = document.createElementNS(SVG.namespace, "use");
+        use.setAttributeNS(SVG.xlink, "xlink:href", SVG.href);
+        svg.appendChild(use);
+        return svg;
+    }
+}
 
-        .links>ul>li {
-            list-style-type: georgian;
-            font-size: larger;
-            font-weight: bolder;
-            color: aliceblue;
+SVG.namespace = "http://www.w3.org/2000/svg";
+SVG.xlink = "http://www.w3.org/1999/xlink";
+SVG.href = "./node_modules/svg-cards/svg-cards.svg#joker_red";
+// ]]>
+</script>
 
-        }
-
-        li>a::after {
-            content: ' (' attr(href) ')';
-        }
-
-        .flex-container {
-            display: Flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-items: flex-end;
-            justify-content: space-between;
-            -border: 2px solid navy;
-            min-width: var(--width-minimum);
-            max-width: var(--prefered-width);
-        }
-
-        #flex>div {
-            flex: 1;
-            flex-basis: 21%;
-            -border: 2px dashed rgb(4, 4, 5);
-            margin: 2px;
-            font-size: 64px;
-            text-align: center;
-        }
-
-
-
-        /* ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ Double-sided SVG image ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ */
-        .playing-card {
-            position: relative;
-            max-width: 340px;
-            max-height: 690px;
-            z-index: 1;
-        }
-
-        .playing-card {
-            perspective: 1000;
-        }
-
-        .double-sided {
-            -width: 450px;
-            -height: 281px;
-            transform-style: preserve-3d;
-            transition: all 1.0s linear;
-        }
-
-        .double-sided:hover {
-            transform: rotateY(180deg);
-            transform-style: preserve-3d;
-            transition: all 1.0s linear;
-        }
-
-        .playing-card:hover {
-            -transform: rotateY(180deg);
-        }
-
-        .face {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-        }
-
-        .card-obverse {
-            display: block;
-            transform: rotateY(180deg);
-        }
-    </style>
 </head>
 
 <body>
-    <div id="flex" class="flex-container">
-
-        <div class="playing-card">
-            <div class="double-sided">
-                <div class=" face">
-                    <svg viewBox="0 0 170 245">
-                        <use href="./node_modules/svg-cards/svg-cards.svg#back" fill="black"></use>
-                    </svg>
-                </div>
-                <div class="card-obverse face">
-                    <svg viewBox="0 0 170 245">
-                        <use href="./node_modules/svg-cards/svg-cards.svg#joker_red"></use>
-                    </svg>
-                </div>
-            </div>
-        </div>
-
-        <div class="playing-card">
-            <div class="double-sided">
-                <div class=" face">
-                    <svg viewBox="0 0 170 245">
-                        <use href="./node_modules/svg-cards/svg-cards.svg#back" fill="navy"></use>
-                    </svg>
-                </div>
-                <div class="card-obverse face">
-                    <svg viewBox="0 0 170 245">
-                        <use href="./node_modules/svg-cards/svg-cards.svg#spade_queen"></use>
-                    </svg>
-                </div>
-            </div>
-        </div>
-
-        <div class="playing-card">
-            <div class="double-sided">
-                <div class=" face">
-                    <svg viewBox="0 0 170 245">
-                        <use href="./node_modules/svg-cards/svg-cards.svg#back" fill="red"></use>
-                    </svg>
-                </div>
-                <div class="card-obverse face">
-                    <svg viewBox="0 0 170 245">
-                        <use href="./node_modules/svg-cards/svg-cards.svg#heart_queen"></use>
-                    </svg>
-                </div>
-            </div>
-        </div>
-
-        <div class="playing-card">
-            <div class="double-sided">
-                <div class=" face">
-                    <svg viewBox="0 0 170 245">
-                        <use href="./node_modules/svg-cards/svg-cards.svg#back" fill="black"></use>
-                    </svg>
-                </div>
-                <div class="card-obverse face">
-                    <svg viewBox="0 0 170 245">
-                        <use href="./node_modules/svg-cards/svg-cards.svg#joker_red"></use>
-                    </svg>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <div class="links">
-        <ul>
-            <li><a href="https://github.com/party-trick">This repo</a></li>
-            <li><a href="https://github.com/htdebeer/SVG-cards">SVG card repo</a></li>
-        </ul>
-    </div>
+    <div id="root"></div>
 </body>
 
 </html>
